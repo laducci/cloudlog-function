@@ -1,0 +1,26 @@
+{
+  "name": "cloudlog-function",
+  "version": "1.0.0",
+  "description": "CloudLog - Azure Function: cálculo de frete/prazo (HTTP Trigger) e enriquecimento de entregas por evento (Service Bus Trigger)",
+  "private": true,
+  "main": "dist/API/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prestart": "npm run build",
+    "start": "func start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:arch": "vitest run tests/architecture",
+    "package": "bash scripts/package.sh"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "archunit": "^2.5.4",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

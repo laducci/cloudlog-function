@@ -1,0 +1,10 @@
+*.ts
+!dist/**
+tests
+src
+coverage
+.github
+scripts
+local.settings.json
+tsconfig*.json
+vitest.config.ts
